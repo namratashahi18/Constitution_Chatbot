@@ -61,7 +61,7 @@ const ChatBox = () => {
     // Simulate bot typing then respond from real backend
     setIsTyping(true);
     try {
-      const response = await fetch(' ', {
+      const response = await fetch('http://localhost:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: trimmed }),
